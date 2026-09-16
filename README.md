@@ -56,6 +56,8 @@ The goal is to provide a consistent starting point without forcing every project
 
 - Documentation space for project-specific notes
 
+I’d make the local-only workflow explicit so a newly created experiment cannot accidentally be pushed to GitHub.
+
 ## 🚀 Using the Template
 
 This repository is configured as a **GitHub Template Repository**.
@@ -76,8 +78,51 @@ To create a new project:
 
 ```bash
 git clone git@github.com:YOUR-USERNAME/YOUR-NEW-REPOSITORY.git
+
 cd YOUR-NEW-REPOSITORY
 ```
+
+### 🔒 For Local-Only Learning & Experiments
+
+If the project is only for learning, experimentation, or prototyping and you **do not want to accidentally push changes to GitHub**, remove the GitHub remote after cloning:
+
+```bash
+git clone git@github.com:amalk-au/web-development-template.git
+```
+
+```bash
+git remote remove origin
+```
+
+Verify that no remote remains:
+
+```bash
+git remote -v
+```
+
+The command should return no output.
+
+The repository will continue to work normally as a local Git repository. You can still:
+
+```bash
+git add .
+git commit -m "Your commit message"
+git log
+git branch
+git diff
+```
+
+but the repository will no longer have a GitHub remote to push to.
+
+When a project is ready to be published, add a remote deliberately:
+
+```bash
+git remote add origin git@github.com:amalk-au/web-development-template.git
+
+git push -u origin main
+```
+
+### 🛠️ Environment Setup
 
 The template uses **Node.js 24** and **pnpm**.
 
