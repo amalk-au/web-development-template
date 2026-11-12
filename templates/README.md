@@ -1,88 +1,135 @@
-# Project Name
+<!-- README TEMPLATE 1. Replace all \[PLACEHOLDERS\]. 2. Remove optional sections that do not apply. 3. Update commands, versions and examples to match the project. 4. Keep documentation synchronised with the codebase. -->
 
-> A concise, one-sentence description of what the project does.
+# \[Project Name \]
+
+> \[A concise, one-sentence description of the project.\]
 
 <!-- Optional: Project badges -->
 
-<!-- !\[CI\]([https://github.com/USERNAME/REPOSITORY/actions/workflows/ci.yml/badge.svg](https://github.com/USERNAME/REPOSITORY/actions/workflows/ci.yml/badge.svg)) -->
+<!-- !\[Build\]([https://github.com/USERNAME/REPOSITORY/actions/workflows/ci.yml/badge.svg](https://github.com/USERNAME/REPOSITORY/actions/workflows/ci.yml/badge.svg)) !\[License\]([https://img.shields.io/github/license/USERNAME/REPOSITORY](https://img.shields.io/github/license/USERNAME/REPOSITORY)) !\[Last Commit\]([https://img.shields.io/github/last-commit/USERNAME/REPOSITORY](https://img.shields.io/github/last-commit/USERNAME/REPOSITORY)) -->
 
-<!-- !\[License\]([https://img.shields.io/github/license/USERNAME/REPOSITORY](https://img.shields.io/github/license/USERNAME/REPOSITORY)) -->
+<!-- Optional: Remove for shorter README files. -->
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Tech Stack](#tech-stack)
+- [Architecture](#architecture)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Variables](#environment-variables)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [Development](#development)
+- [Testing](#testing)
+- [API Reference](#api-reference)
+- [Deployment](#deployment)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
+
+---
 
 ## Overview
 
-Briefly describe:
-
-- What the project does.
-
-- The problem it solves.
-
-- Who it's intended for.
+\[Describe what the project does, the problem it solves and its intended audience.\]
 
 ## Features
 
-- Feature one
+- **\[Feature One\]:** \[Description.\]
 
-- Feature two
+- **\[Feature Two\]:** \[Description.\]
 
-- Feature three
-
-## Screenshots
+- **\[Feature Three\]:** \[Description.\]
 
 <!-- Optional: Remove if the project has no visual interface. -->
 
+## Screenshots
+
 ### Dashboard
 
-### Login Page
+![Dashboard](./screenshots/dashboard.png)
 
 ### Mobile View
 
-<!-- Optional: Side-by-side screenshots using HTML -->
+![Mobile View](./screenshots/mobile-view.png)
 
-<p align="center"> <img src="docs/screenshots/desktop.png" width="48%" alt="Desktop view" /> <img src="docs/screenshots/mobile.png" width="48%" alt="Mobile view" /> </p>
+<!-- Optional: Live demonstration. -->
+
+**Live Demo:** [Project Demo](https://example.com)
 
 ## Tech Stack
 
-| Category        | Technology     |
-| --------------- | -------------- |
-| Frontend        | React, Next.js |
-| Backend         | Node.js        |
-| Language        | TypeScript     |
-| Database        | PostgreSQL     |
-| ORM             | Prisma         |
-| Package Manager | pnpm           |
-| Infrastructure  | AWS            |
+| Category        | Technology                     |
+| --------------- | ------------------------------ |
+| Frontend        | \[React / Next.js\]            |
+| Backend         | \[Node.js / Express\]          |
+| Language        | \[TypeScript / JavaScript\]    |
+| Styling         | \[Tailwind CSS / CSS\]         |
+| Database        | \[PostgreSQL / MongoDB\]       |
+| ORM             | \[Prisma / Drizzle\]           |
+| Authentication  | \[Auth.js / JWT\]              |
+| Package Manager | \[pnpm / npm\]                 |
+| Infrastructure  | \[AWS / Vercel / Docker\]      |
+| Testing         | \[Vitest / Jest / Playwright\] |
+
+<!-- Optional: Remove if architecture is straightforward. -->
+
+## Architecture
+
+\[Describe the application's architecture and how its main components interact.\]
+
+<!-- Optional: Architecture diagram. -->
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js >= 20
+- \[Runtime / Framework and version\]
 
-- pnpm >= 9
+- \[Package manager and version\]
 
-- PostgreSQL >= 16
+- \[Database or external dependencies\]
 
 ### Installation
 
-```
-# Clone repository
-git clone https://github.com/USERNAME/REPOSITORY.git
+1.  Clone the repository:
 
-# Navigate to project
-cd REPOSITORY
+    ```
+    git clone https://github.com/USERNAME/REPOSITORY.git
+    cd REPOSITORY
+    ```
 
-# Install dependencies
-pnpm install
+2.  Install dependencies:
 
-# Configure environment variables
-cp .env.example .env
+    ```
+    pnpm install
+    ```
 
-# Run database migrations
-pnpm prisma migrate dev
+3.  Configure environment variables:
 
-# Start development server
-pnpm dev
-```
+    ```
+    cp .env.example .env
+    ```
+
+4.  Run required setup commands:
+
+    ```
+    pnpm prisma migrate dev
+    ```
+
+5.  Start the development server:
+
+    ```
+    pnpm dev
+    ```
+
+<!-- Replace commands with the actual project commands. Remove steps that are not applicable. -->
 
 ### Environment Variables
 
@@ -94,11 +141,9 @@ pnpm dev
 
 See `.env.example` for the complete configuration.
 
-**Never commit secrets or credentials.**
+**Never commit secrets, credentials or production environment files.**
 
 ## Project Structure
-
-<!-- Optional: Include for non-trivial projects. -->
 
 ```
 project/
@@ -106,21 +151,21 @@ project/
 ├── src/
 │   ├── app/            # Application routes
 │   ├── components/     # Reusable components
+│   ├── hooks/          # Custom hooks
 │   ├── lib/            # Shared utilities
-│   ├── services/       # Business logic
+│   ├── services/       # Business logic and API clients
 │   └── types/          # TypeScript definitions
 ├── prisma/             # Database schema and migrations
 ├── tests/              # Automated tests
-├── docs/
-│   └── screenshots/    # Project screenshots
+├── docs/               # Project documentation
 ├── .env.example
 ├── package.json
 └── README.md
 ```
 
-## Available Scripts
+<!-- Adapt the structure to match the actual repository. -->
 
-<!-- Optional: Keep synchronised with package.json. -->
+## Available Scripts
 
 | Command          | Description              |
 | ---------------- | ------------------------ |
@@ -131,23 +176,27 @@ project/
 | `pnpm test`      | Run tests                |
 | `pnpm typecheck` | Check TypeScript types   |
 
-## Development
+<!-- Keep synchronised with package.json. Remove unavailable commands. -->
 
-<!-- Optional: Include for collaborative projects. -->
+## Development
 
 1.  Create a feature branch.
 
-2.  Implement your changes.
+2.  Implement changes following existing conventions.
 
-3.  Run linting, type checking, and tests.
+3.  Run linting, formatting, type checking and tests.
 
-4.  Open a pull request.
+4.  Commit your changes.
 
-Follow existing code conventions and keep changes focused.
+5.  Open a pull request.
+
+Keep changes focused, maintainable and well-documented.
+
+<!-- Optional: Link additional development guidelines. -->
+
+See [Development Guidelines](docs/development.md).
 
 ## Testing
-
-<!-- Optional: Include when automated tests exist. -->
 
 Run the test suite:
 
@@ -155,34 +204,62 @@ Run the test suite:
 pnpm test
 ```
 
-Document additional testing requirements where necessary.
+<!-- Optional: Additional testing commands. -->
+
+```
+pnpm test:watch
+pnpm test:coverage
+pnpm test:e2e
+```
+
+<!-- Document unit, integration and end-to-end testing where applicable. -->
 
 ## API Reference
 
-<!-- Optional: Include if the project exposes an API. -->
+<!-- Optional: Remove if the project does not expose an API. -->
 
-| Method | Endpoint        | Description        |
-| ------ | --------------- | ------------------ |
-| GET    | `/api/resource` | Retrieve resources |
-| POST   | `/api/resource` | Create a resource  |
+**Base URL:**`http://localhost:3000/api`
+
+| Method | Endpoint             | Description        |
+| ------ | -------------------- | ------------------ |
+| GET    | `/api/resources`     | Retrieve resources |
+| POST   | `/api/resources`     | Create a resource  |
+| PUT    | `/api/resources/:id` | Update a resource  |
+| DELETE | `/api/resources/:id` | Delete a resource  |
+
+**Authentication:** \[Describe authentication requirements.\]
 
 For detailed documentation, see [API Documentation](docs/api.md).
 
 ## Deployment
 
-<!-- Optional: Include when deployment instructions are relevant. -->
+<!-- Optional: Remove if deployment documentation is not relevant. -->
 
-- **Platform:** Hosting provider
+| Configuration | Details                 |
+| ------------- | ----------------------- |
+| Platform      | \[Hosting provider\]    |
+| Build Command | `pnpm build`            |
+| Start Command | `pnpm start`            |
+| Database      | \[Production database\] |
 
-- **Build command:**`pnpm build`
-
-- **Deployment:** CI/CD pipeline
+\[Briefly describe the deployment process.\]
 
 See [Deployment Guide](docs/deployment.md) for details.
 
+## Troubleshooting
+
+<!-- Optional: Include common issues and their solutions. -->
+
+| Issue                         | Solution                                              |
+| ----------------------------- | ----------------------------------------------------- |
+| Dependency installation fails | Verify runtime and package manager versions.          |
+| Database connection fails     | Check database availability and connection string.    |
+| Application fails to start    | Verify environment variables and configuration.       |
+| Build fails                   | Check dependencies, TypeScript errors and build logs. |
+
 ## Contributing
 
-<!-- Optional: Include for open-source or collaborative projects. -->
+<!-- Optional: Remove for personal or non-collaborative projects. -->
 
 Contributions are welcome.
 
@@ -190,26 +267,38 @@ Contributions are welcome.
 
 2.  Create a feature branch.
 
-3.  Commit your changes.
+3.  Implement and test your changes.
 
 4.  Open a pull request.
 
-For significant changes, open an issue first to discuss the proposed approach.
+For significant changes, open an issue first.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for additional guidelines.
 
 ## License
 
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
 
-You are free to use, modify, and distribute this software under the terms of the licence.
+You are free to use, modify and distribute this software under the terms of the licence.
 
 See [LICENSE](./LICENSE) for the full licence text.
 
+## Acknowledgements
+
+<!-- Optional: Credit libraries, resources, contributors or organisations. -->
+
+- \[Name\] — \[Contribution or acknowledgement.\]
+
 ## Contact
 
-<!-- Optional: Include when a contact point is useful. -->
+<!-- Optional: Remove if contact information is not necessary. -->
 
-- **Author:** Amal K.
+- **Author:** \[Amal K.\]
 
-- **GitHub:**[@amalk-au](https://github.com/amalk-au)
+- **GitHub:**[@USERNAME](https://github.com/amalk-au)
 
 - **Issues:**[GitHub Issues](https://github.com/amalk-au/REPOSITORY/issues)
+
+---
+
+<p align="center"> Developed by <a href="[https://github.com/amalk-au](https://github.com/amalk-au)">amalk-au</a> </p>
